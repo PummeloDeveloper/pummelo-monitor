@@ -7,7 +7,29 @@
     <groupId>io.pummelo-projects</groupId>
     <artifactId>pummelo-monitor</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>pummelo-monitor-model</module>
+        <module>pummelo-monitor-admin</module>
+    </modules>
     <packaging>pom</packaging>
+
+    <repositories>
+        <repository>
+            <id>orange-repo</id>
+            <url>http://120.24.168.53:8081/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>orange-releases-repo</id>
+            <url>http://120.24.168.53:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>orange-snapshots-repo</id>
+            <url>http://120.24.168.53:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <properties>
         <java.version>8</java.version>
